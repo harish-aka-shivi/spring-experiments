@@ -36,7 +36,7 @@ public class InvoiceController {
     }
 
     @PostMapping("/invoices-temp")
-    public Invoice createInvoiceTemp(@RequestParam("user_id") @NotBlank String userId, @RequestParam    @Min(10)
+    public Invoice createInvoiceTemp(@RequestParam("user_id") @NotBlank String userId, @RequestParam @Min(10)
     @Max(50) Integer amount) {
         return invoiceService.create(userId, amount);
     }
